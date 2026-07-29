@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head><script type='text/javascript' nonce='k/G0VoJFvetEWX9vrZOShQ==' src='https://contribution.usercontent.google.com/KHZf5lJUUn3NhwKPhIRNVui-g9nGWf74igrzJVbQ4zz2FZu7MGc9HrXIOx3YBEIHiJZF3qbACHqClc5JaVqJtR9_hSmEhm0SoQkJ-0cBP6RL44_1g-sEnOJGU03VBaDZL4ApZjwmTcilwnfLt-L-EVsJF-vLrNFopcbAgwq8mT_zCBkzV_X5_Xg73CB1SHqP_YyUPd207cEpAbzLNV8obkzQ8iJpgIrN7YjNYWTduJD-zafsxstJbT_WP-x31H0kJshrbXicxxVV9VXaUX4EjxtHJlkSXfCQd8b7-bIXa_ANXhewl8aoDy2v7pWadR9DWdCzwcjwe1odLHWv5JykjG3x3romv8SAQAMQwXRp7j9cPkau6KAcy4iPaF0obqNQfhL95cJapDX89kfMIJLdRdGlK55z1q6yMVRCrLGYAPuQRDsjP58uhyFEXqPQV_9DKBlKdnNax_4dK7hGTIWqmvNCTm2t47_t6SvHhP-7iv5USbYrwFlhPMqSUeL0jSQdMqd0XwVN0wKQTvBSQI1cy8V5_GdbRaAWWxawnNCGy1LyFitheA7VrAQNyiJNRhVubz9CFa0wQMDbC1DOPmUOtIhDXBs9G1JAAieV5O1t1yKQ8hiY7efuEc4RTHOfyrZ5qehoE7EOnN6jtgopY22eiMfWbVUgE12YJ_Va-QMCw86tazc6Dz9J4hfUekBuy-HbhwVBGkxiTFPVpu9pLw'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stary Młyn – Łowisko & Smażalnia Ryb</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a2540;
+            --accent: #d97706;
+            --accent-hover: #b45309;
+            --bg-main: #070d19;
+            --bg-card: rgba(23, 32, 54, 0.7);
+            --bg-card-hover: rgba(30, 43, 73, 0.85);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --border-hover: rgba(217, 119, 6, 0.4);
+            --gold: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(30, 58, 138, 0.25) 0%, transparent 45%),
+                radial-gradient(circle at 85% 60%, rgba(217, 119, 6, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(15, 23, 42, 0.8) 0%, transparent 50%),
+                radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 32px 32px;
+            background-attachment: fixed;
+        }
+
+        .top-bar {
+            background-color: rgba(7, 13, 25, 0.85);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 20px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero {
+            position: relative;
+            padding: 130px 20px 110px;
+            background: linear-gradient(180deg, rgba(7, 13, 25, 0.5) 0%, var(--bg-main) 100%),
+                        url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            text-align: center;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, var(--bg-main), transparent);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(217, 119, 6, 0.15);
+            border: 1px solid rgba(217, 119, 6, 0.4);
+            color: #fbbf24;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: #cbd5e1;
+            max-width: 680px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--accent) 0%, #b45309 100%);
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(217, 119, 6, 0.35);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(217, 119, 6, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 20px 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-glass {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 32px;
+            backdrop-filter: blur(16px);
+            transition: all 0.3s ease;
+        }
+
+        .card-glass:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-5px);
+            background: var(--bg-card-hover);
+        }
+
+        .price-banner {
+            background: linear-gradient(135deg, rgba(217, 119, 6, 0.2) 0%, rgba(180, 83, 9, 0.1) 100%);
+            border: 1px solid rgba(217, 119, 6, 0.4);
+            border-left: 5px solid var(--accent);
+            padding: 24px 28px;
+            border-radius: 18px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .price-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .price-tag {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fbbf24;
+            background: rgba(217, 119, 6, 0.2);
+            padding: 8px 20px;
+            border-radius: 14px;
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            white-space: nowrap;
+        }
+
+        .fresh-sale-banner {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-left: 5px solid #3b82f6;
+            padding: 28px;
+            border-radius: 18px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .fresh-sale-icon {
+            font-size: 2.5rem;
+            background: rgba(59, 130, 246, 0.15);
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+        }
+
+        .fish-sale-tag {
+            background: rgba(59, 130, 246, 0.15);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .xmas-note {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 14px;
+            background: rgba(220, 38, 38, 0.15);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            color: #fca5a5;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+
+        .notice-banner {
+            background: linear-gradient(135deg, rgba(217, 119, 6, 0.12) 0%, rgba(180, 83, 9, 0.05) 100%);
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            border-left: 5px solid var(--accent);
+            padding: 22px 26px;
+            border-radius: 16px;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .rules-badge-no-kill {
+            display: inline-block;
+            background: rgba(220, 38, 38, 0.2);
+            border: 1px solid rgba(220, 38, 38, 0.5);
+            color: #fca5a5;
+            font-weight: 800;
+            padding: 4px 14px;
+            border-radius: 6px;
+            letter-spacing: 1px;
+            margin-left: 10px;
+        }
+
+        .rules-list {
+            list-style: none;
+            counter-reset: rules-counter;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 18px;
+        }
+
+        .rules-item {
+            counter-increment: rules-counter;
+            position: relative;
+            padding: 16px 16px 16px 54px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 0.92rem;
+            color: #cbd5e1;
+        }
+
+        .rules-item::before {
+            content: counter(rules-counter);
+            position: absolute;
+            left: 14px;
+            top: 14px;
+            width: 28px;
+            height: 28px;
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            color: #60a5fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-subtitle {
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+            margin-bottom: 60px;
+        }
+
+        /* Reviews Section */
+        .review-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 28px;
+            backdrop-filter: blur(16px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            background: var(--bg-card-hover);
+        }
+
+        .review-stars {
+            color: var(--gold);
+            font-size: 1.15rem;
+            margin-bottom: 14px;
+            letter-spacing: 2px;
+        }
+
+        .review-quote {
+            color: #cbd5e1;
+            font-size: 0.93rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .review-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 16px;
+        }
+
+        .review-avatar {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--accent) 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .review-author-name {
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 0.95rem;
+        }
+
+        .review-badge {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .menu-list {
+            list-style: none;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tag {
+            font-size: 0.78rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .tag-fried {
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .tag-smoked {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 13px 0;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 700;
+            color: #cbd5e1;
+        }
+
+        .closed {
+            color: #f87171 !important;
+        }
+
+        .showcase-card {
+            margin-bottom: 60px;
+            overflow: hidden;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .showcase-card img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .showcase-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(7, 13, 25, 0.95));
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.5) 0%, rgba(10, 37, 64, 0.8) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: 24px;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .phone-link {
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+            font-weight: 800;
+            color: #fbe5a2;
+            text-decoration: none;
+            display: inline-block;
+            margin: 22px 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>📍 Kolonia Karczmy, ul. Malinowa 11, 97-425</div>
+            <div>💳 Płatność na miejscu: <strong>Gotówka / BLIK</strong></div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <span class="hero-badge">Wędkowanie & Gastronomia</span>
+        <h1>Łowisko i Smażalnia Ryb „Stary Młyn”</h1>
+        <p>Wyjątkowa przestrzeń dla wędkarzy, rodzin i miłośników świeżej ryby prosto z wody.</p>
+        <div class="hero-cta">
+            <a href="tel:607309316" class="btn">📞 Zadzwoń: 607 309 316</a>
+            <a href="https://maps.app.goo.gl/t6udVdVQmarvASXG7?g_st=ic" target="_blank" class="btn btn-secondary">📍 Nawiguj w Google Maps</a>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <div class="price-banner">
+            <div class="price-info">
+                <div style="font-size: 2.2rem;">🎣</div>
+                <div>
+                    <h3 style="font-size: 1.25rem; color: #ffffff; margin-bottom: 2px;">Cennik Wędkowania</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95rem;">W cenie wstępu: możliwość łowienia na <strong>2 wędki na osobę</strong>.</p>
+                </div>
+            </div>
+            <div class="price-tag">
+                35 zł <span style="font-size: 0.9rem; font-weight: 500; color: #cbd5e1;">/ osoba wędkująca</span>
+            </div>
+        </div>
+
+        <div class="showcase-card">
+            <img src="dron_lowisko.jpg" onerror="this.onerror=null; this.src=&#39;https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=1200&amp;q=80&#39;;" alt="Łowisko Stary Młyn z lotu ptaka">
+            <div class="showcase-overlay">
+                <h3>Malownicze Łowisko „Stary Młyn” z Lotu Ptaka</h3>
+                <p>Duży, zielony teren z licznymi akwenami gwarantujący spokój, przestrzeń i idealne stanowiska wędkarskie.</p>
+            </div>
+        </div>
+
+        <!-- Google Reviews Section -->
+        <div class="section-header">
+            <div class="section-subtitle">Głos Naszych Gości</div>
+            <h2 class="section-title">Opinie z Google Maps ★★★★★</h2>
+        </div>
+
+        <div class="grid-3">
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-quote">
+                        „Przepyszna rybka, bardzo dobra surówka i dobre frytki. Od wielu lat super smak. Ryba bez zbędnej grubej paniery, jedząc czujesz, że jesz dobrze zrobioną rybę. Serdecznie polecam.”
+                    </p>
+                </div>
+                <div class="review-meta">
+                    <div class="review-avatar">E</div>
+                    <div>
+                        <div class="review-author-name">Edyta Maria Zet</div>
+                        <div class="review-badge">Lokalny przewodnik • Google Reviews</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-quote">
+                        „Miejsce jest śliczne, bardzo duże łowiska na których można się zrelaksować za niewielką opłatą. Ryba świeżutka i soczysta, frytki chrupiące, a surówka idealna w smaku – przypomniała obiady z dzieciństwa! Napewno zawitamy ponownie.”
+                    </p>
+                </div>
+                <div class="review-meta">
+                    <div class="review-avatar">A</div>
+                    <div>
+                        <div class="review-author-name">Adrian Bernas</div>
+                        <div class="review-badge">Lokalny przewodnik • Google Reviews</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-quote">
+                        „To miejsce to prawdziwa perełka – klimatyczne i kameralne stawy łowieckie. Wybraliśmy się z dziećmi, które były zachwycone możliwością łowienia ryb. Ku naszej radości wyciągały naprawdę duże karpie! Szczęście dzieci bezcenne.”
+                    </p>
+                </div>
+                <div class="review-meta">
+                    <div class="review-avatar">R</div>
+                    <div>
+                        <div class="review-author-name">Rafał Stramowski</div>
+                        <div class="review-badge">Lokalny przewodnik • Google Reviews</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fresh-sale-banner">
+            <div class="fresh-sale-icon">🐟</div>
+            <div>
+                <h3 style="color: #ffffff; font-size: 1.3rem; margin-bottom: 6px; font-weight: 700;">
+                    Sprzedaż Świeżej Ryby Nieprzetworzonej
+                </h3>
+                <p style="color: #cbd5e1; font-size: 0.95rem;">
+                    Kupisz u nas świeże ryby w całości – idealne do samodzielnego przygotowania w domu:
+                </p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                    <span class="fish-sale-tag">Pstrąg</span>
+                    <span class="fish-sale-tag">Jesiotr</span>
+                    <span class="fish-sale-tag">Karp</span>
+                </div>
+                <div class="xmas-note">
+                    🎄 <strong>Okres Przedświąteczny:</strong> Przed 24 grudnia zapraszamy po świeżego karpia na wigilijny stół! Prosimy o wcześniejszy telefon, aby upewnić się co do dostępności i zarezerwować rybę.
+                </div>
+            </div>
+        </div>
+
+        <div class="notice-banner">
+            <div style="font-size: 1.8rem;">📱</div>
+            <div>
+                <strong style="color: #fef3c7; display: block; margin-bottom: 4px; font-size: 1.05rem;">
+                    Ważne: Przed przyjazdem prosimy o kontakt telefoniczny!
+                </strong>
+                <span style="color: #cbd5e1; font-size: 0.92rem;">
+                    Ze względu na warunki pogodowe, sezonowość oraz zmienność codziennych dostaw, dostępność gatunków ryb oraz dokładne godziny otwarcia mogą się zmieniać. Zadzwoń pod numer <strong>607 309 316</strong>, aby wszystko potwierdzić przed drogą.
+                </span>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <div class="section-subtitle">Zasady i Etykieta</div>
+            <h2 class="section-title">
+                Regulamin Łowiska Ryb
+                <span class="rules-badge-no-kill">NO KILL</span>
+            </h2>
+        </div>
+
+        <div class="card-glass" style="margin-bottom: 60px;">
+            <ul class="rules-list">
+                <li class="rules-item">
+                    Przed rozpoczęciem łowienia należy uiścić opłatę u właściciela i zasięgnąć informacji o dodatkowych zasadach łowienia. Opłata nie dotyczy osób towarzyszących.
+                </li>
+                <li class="rules-item">
+                    Na stanowiska nie podjeżdżamy pojazdami – udajemy się pieszo z parkingu na stanowisko.
+                </li>
+                <li class="rules-item">
+                    Łowisko czynne w okresie wiosenno-jesiennym od godziny 8:00 do zmierzchu.
+                </li>
+                <li class="rules-item">
+                    Zakaz pozostawiania wędek bez opieki.
+                </li>
+                <li class="rules-item">
+                    <strong>Obowiązkowo na stanowisku:</strong> Podbierak na ryby, Siatka na ryby, Wyhaczarka do haczyków (aby nie męczyć ryb).
+                </li>
+                <li class="rules-item">
+                    Ryby w dobrym stanie i powyżej 2 kg wypuszczamy od razu do wody. Ryby w złym stanie lub które wędkarz chce zakupić, trzymamy w siatce.
+                </li>
+                <li class="rules-item">
+                    W przypadku braku podbieraka, siatki na ryby lub wyhaczarki do haczyków – możliwość wypożyczenia na miejscu po uiszczeniu kaucji (zwracanej przy zwrocie nieuszkodzonego sprzętu).
+                </li>
+                <li class="rules-item">
+                    W przypadku podejrzenia kradzieży ryb właściciel lub osoba do tego upoważniona ma prawo do kontroli sprzętu lub pojazdu.
+                </li>
+                <li class="rules-item">
+                    Opuszczenie łowiska możliwe jest wyłącznie po uprzednim zgłoszeniu opiekunowi łowiska.
+                </li>
+                <li class="rules-item">
+                    Możliwość rozpalenia grilla na terenie łowiska.
+                </li>
+                <li class="rules-item">
+                    Zakaz wnoszenia alkoholu.
+                </li>
+                <li class="rules-item">
+                    Zakaz wprowadzania psów bez smyczy.
+                </li>
+                <li class="rules-item">
+                    Wszelkie informacje i pytania pod numerem telefonu: <strong>607 309 316</strong>.
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-header">
+            <div class="section-subtitle">Karta Smaków</div>
+            <h2 class="section-title">Menu Smażalni & Wędzarni</h2>
+        </div>
+
+        <div class="grid-2">
+            <div class="card-glass">
+                <div class="card-header">
+                    <h3>🍳 Ryby Smażone</h3>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+                    Chrupiące ryby serwowane na miejscu. Dostępność poszczególnych gatunków jest zmienna:
+                </p>
+                <ul class="menu-list">
+                    <li class="menu-item"><span>Pstrąg Tęczowy</span> <span class="tag tag-fried">Smażony</span></li>
+                    <li class="menu-item"><span>Pstrąg Królewski</span> <span class="tag tag-fried">Smażony</span></li>
+                    <li class="menu-item"><span>Dorsz</span> <span class="tag tag-fried">Smażony</span></li>
+                    <li class="menu-item"><span>Sandacz</span> <span class="tag tag-fried">Smażony</span></li>
+                    <li class="menu-item"><span>Karp</span> <span class="tag tag-fried">Smażony</span></li>
+                    <li class="menu-item"><span>Sum</span> <span class="tag tag-fried">Smażony</span></li>
+                    <li class="menu-item"><span>Jesiotr</span> <span class="tag tag-fried">Smażony</span></li>
+                    <li class="menu-item"><span>Miętus</span> <span class="tag tag-fried">Smażony</span></li>
+                </ul>
+            </div>
+
+            <div class="card-glass">
+                <div class="card-header">
+                    <h3>💨 Wyroby Wędzone</h3>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+                    Aromatyczne wędzone specjały przygotowywane tradycyjnie (dostępność nieregularna):
+                </p>
+                <ul class="menu-list">
+                    <li class="menu-item"><span>Pstrąg Tęczowy</span> <span class="tag tag-smoked">Wędzony</span></li>
+                    <li class="menu-item"><span>Halibut</span> <span class="tag tag-smoked">Wędzony</span></li>
+                    <li class="menu-item"><span>Węgorz</span> <span class="tag tag-smoked">Okazjonalnie</span></li>
+                </ul>
+                <div style="margin-top: 30px; padding: 16px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid var(--border-color);">
+                    <small style="color: var(--text-muted);">
+                        💳 <strong>Forma Płatności:</strong> Płacisz wygodnie <strong>gotówką</strong> lub kodem <strong>BLIK</strong>.
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <div class="section-subtitle">Dlaczego warto wpaść?</div>
+            <h2 class="section-title">Infrastruktura & Atrakcje</h2>
+        </div>
+
+        <div class="grid-4">
+            <div class="card-glass feature-card">
+                <div class="feature-icon">🎣</div>
+                <h4>2 Łowiska</h4>
+                <p>Świetnie zarybione akweny dla wędkarzy amatorów i pasjonatów.</p>
+            </div>
+            <div class="card-glass feature-card">
+                <div class="feature-icon">🎡</div>
+                <h4>Plac Zabaw</h4>
+                <p>Bezpieczna przestrzeń do zabawy stworzona z myślą o najmłodszych.</p>
+            </div>
+            <div class="card-glass feature-card">
+                <div class="feature-icon">🌲</div>
+                <h4>Duży Teren</h4>
+                <p>Mnóstwo przestrzeni na spacer, wyciszenie i wypoczynek w naturze.</p>
+            </div>
+            <div class="card-glass feature-card">
+                <div class="feature-icon">🌙</div>
+                <h4>Wieczorne Imprezy</h4>
+                <p>Okazjonalne wydarzenia i świetna atmosfera po zmroku.</p>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <div class="section-subtitle">Grafik</div>
+            <h2 class="section-title">Godziny Otwarcia (Sezon Wakacyjny)</h2>
+        </div>
+
+        <div class="grid-2">
+            <div class="card-glass">
+                <div class="card-header">
+                    <h3>🎣 Łowisko</h3>
+                </div>
+                <table class="hours-table">
+                    <tr><td>Poniedziałek</td><td>11:00 – 20:00</td></tr>
+                    <tr><td>Wtorek – Czwartek</td><td>09:00 – 20:00</td></tr>
+                    <tr><td>Piątek – Niedziela</td><td>08:00 – 20:00</td></tr>
+                </table>
+            </div>
+
+            <div class="card-glass">
+                <div class="card-header">
+                    <h3>🐟 Smażalnia Ryb</h3>
+                </div>
+                <table class="hours-table">
+                    <tr><td>Poniedziałek</td><td class="closed">Nieczynne</td></tr>
+                    <tr><td>Wtorek – Czwartek</td><td>14:00 – 19:00</td></tr>
+                    <tr><td>Piątek</td><td>14:00 – 20:00</td></tr>
+                    <tr><td>Sobota – Niedziela</td><td>12:00 – 20:00</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <h2 style="font-size: 2.1rem; margin-bottom: 10px; color: #ffffff;">Planujesz wizytę? Zadzwoń wcześniej!</h2>
+            <p style="color: #93c5fd; font-size: 1.1rem;">
+                Kolonia Karczmy, ul. Malinowa 11, 97-425
+            </p>
+            <a href="tel:607309316" class="phone-link">607 309 316</a>
+            <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 30px;">
+                💳 Formy płatności na miejscu: <strong>Gotówka oraz BLIK</strong>
+            </p>
+            <div>
+                <a href="https://maps.app.goo.gl/t6udVdVQmarvASXG7?g_st=ic" target="_blank" class="btn" style="background: white; color: var(--primary);">
+                    📍 Otwórz nawigację w Google Maps
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; Łowisko i Smażalnia Ryb Stary Młyn. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+</html>
