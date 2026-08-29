@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head><script type='text/javascript' nonce='k/G0VoJFvetEWX9vrZOShQ==' src='https://contribution.usercontent.google.com/KHZf5lJUUn3NhwKPhIRNVui-g9nGWf74igrzJVbQ4zz2FZu7MGc9HrXIOx3YBEIHiJZF3qbACHqClc5JaVqJtR9_hSmEhm0SoQkJ-0cBP6RL44_1g-sEnOJGU03VBaDZL4ApZjwmTcilwnfLt-L-EVsJF-vLrNFopcbAgwq8mT_zCBkzV_X5_Xg73CB1SHqP_YyUPd207cEpAbzLNV8obkzQ8iJpgIrN7YjNYWTduJD-zafsxstJbT_WP-x31H0kJshrbXicxxVV9VXaUX4EjxtHJlkSXfCQd8b7-bIXa_ANXhewl8aoDy2v7pWadR9DWdCzwcjwe1odLHWv5JykjG3x3romv8SAQAMQwXRp7j9cPkau6KAcy4iPaF0obqNQfhL95cJapDX89kfMIJLdRdGlK55z1q6yMVRCrLGYAPuQRDsjP58uhyFEXqPQV_9DKBlKdnNax_4dK7hGTIWqmvNCTm2t47_t6SvHhP-7iv5USbYrwFlhPMqSUeL0jSQdMqd0XwVN0wKQTvBSQI1cy8V5_GdbRaAWWxawnNCGy1LyFitheA7VrAQNyiJNRhVubz9CFa0wQMDbC1DOPmUOtIhDXBs9G1JAAieV5O1t1yKQ8hiY7efuEc4RTHOfyrZ5qehoE7EOnN6jtgopY22eiMfWbVUgE12YJ_Va-QMCw86tazc6Dz9J4hfUekBuy-HbhwVBGkxiTFPVpu9pLw'></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stary Młyn – Łowisko & Smażalnia Ryb</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0a2540;
@@ -352,7 +352,6 @@
             margin-bottom: 60px;
         }
 
-        /* Reviews Section */
         .review-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -577,7 +576,7 @@
         </div>
 
         <div class="showcase-card">
-            <img src="dron_lowisko.jpg" onerror="this.onerror=null; this.src=&#39;https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=1200&amp;q=80&#39;;" alt="Łowisko Stary Młyn z lotu ptaka">
+            <img src="dron_lowisko.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80';" alt="Łowisko Stary Młyn z lotu ptaka">
             <div class="showcase-overlay">
                 <h3>Malownicze Łowisko „Stary Młyn” z Lotu Ptaka</h3>
                 <p>Duży, zielony teren z licznymi akwenami gwarantujący spokój, przestrzeń i idealne stanowiska wędkarskie.</p>
@@ -797,32 +796,34 @@
             </div>
         </div>
 
+        <!-- Hours Section with exact Google Maps schedule + Closed Tuesdays -->
         <div class="section-header">
-            <div class="section-subtitle">Grafik</div>
-            <h2 class="section-title">Godziny Otwarcia (Sezon Wakacyjny)</h2>
+            <div class="section-subtitle">Aktualny Grafik</div>
+            <h2 class="section-title">Godziny Otwarcia</h2>
         </div>
 
         <div class="grid-2">
             <div class="card-glass">
                 <div class="card-header">
-                    <h3>🎣 Łowisko</h3>
+                    <h3>🎣 Stawy Rybne i Łowisko</h3>
                 </div>
                 <table class="hours-table">
-                    <tr><td>Poniedziałek</td><td>11:00 – 20:00</td></tr>
-                    <tr><td>Wtorek – Czwartek</td><td>09:00 – 20:00</td></tr>
-                    <tr><td>Piątek – Niedziela</td><td>08:00 – 20:00</td></tr>
+                    <tr><td>Poniedziałek</td><td class="closed">Zamknięte</td></tr>
+                    <tr><td>Wtorek</td><td class="closed">Zamknięte</td></tr>
+                    <tr><td>Środa – Piątek</td><td>09:00 – 19:00</td></tr>
+                    <tr><td>Sobota – Niedziela</td><td>08:00 – 19:00</td></tr>
                 </table>
             </div>
 
             <div class="card-glass">
                 <div class="card-header">
-                    <h3>🐟 Smażalnia Ryb</h3>
+                    <h3>🐟 Smażalnia / Kuchnia</h3>
                 </div>
                 <table class="hours-table">
-                    <tr><td>Poniedziałek</td><td class="closed">Nieczynne</td></tr>
-                    <tr><td>Wtorek – Czwartek</td><td>14:00 – 19:00</td></tr>
-                    <tr><td>Piątek</td><td>14:00 – 20:00</td></tr>
-                    <tr><td>Sobota – Niedziela</td><td>12:00 – 20:00</td></tr>
+                    <tr><td>Poniedziałek</td><td class="closed">Zamknięte</td></tr>
+                    <tr><td>Wtorek</td><td class="closed">Zamknięte</td></tr>
+                    <tr><td>Środa – Piątek</td><td>14:00 – 19:00</td></tr>
+                    <tr><td>Sobota – Niedziela</td><td>12:00 – 19:00</td></tr>
                 </table>
             </div>
         </div>
